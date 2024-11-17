@@ -7,7 +7,7 @@
 *  Name: Roman Telets
 *  Student ID: 162741227
 *  Date: 2024/11/17
-*  Vercel Web App URL: N/A
+*  Vercel Web App URL: https://web-322-a4-lovat.vercel.app/
 *  GitHub Repository URL: https://github.com/OddWumpus/WEB322-A4/
 ********************************************************************************/
 

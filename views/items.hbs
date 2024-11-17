@@ -1,0 +1,58 @@
+<div class="container my-5">
+    <!-- Page Header -->
+    <div class="text-center mb-4">
+        <h2 class="display-4 text-primary">Items</h2>
+        <p class="lead text-muted">Browse and manage your items</p>
+        <hr class="w-50 mx-auto">
+    </div>
+
+    <!-- Table Section -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Items List</h5>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped mb-0">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Item ID</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Item Date</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Published</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each items}}
+                            <tr>
+                                <td>{{id}}</td>
+                                <td>{{title}}</td>
+                                <td>{{itemDate}}</td>
+                                <td>{{price}}</td>
+                                <td>
+                                    <a href="/items?category={{category}}" class="text-decoration-none text-info">{{category}}</a>
+                                </td>
+                                <td>
+                                    <span class="badge {{#if published}}badge-success{{else}}badge-danger{{/if}}">
+                                        {{published}}
+                                    </span>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- No Items Found Message -->
+    <div class="col-md-12 text-center mt-4">
+        {{#unless items}}
+            <div class="alert alert-warning">
+                <strong>{{message}}</strong>
+            </div>
+        {{/unless}}
+    </div>
+</div>
